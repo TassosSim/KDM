@@ -2,3 +2,4 @@ Add database connection
 Move Graveyard list to separate site
 Stringify input
 Add KDM symbols and flair and style
+Add sound effects
