@@ -4,6 +4,8 @@ Stringify input, sanitize and validate input data
 Add KDM symbols and flair and style
 Add sound effects
 CSP and nonces to avoid inline js script
+If user inputs illegal characters, add something that lets them know
+
 
 Add the following tables and input:
 Favorite Weapon: - List all weapon keywords

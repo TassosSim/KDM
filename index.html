@@ -20,7 +20,7 @@
             <!--Name-->
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ]+$" required>
+                <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" required>
             </div>
 
             <!--Hunt XP-->
@@ -41,7 +41,7 @@
             <!--Cause of Death-->
             <div class="form-group">
                 <label for="causeOfDeath">Cause of Death:</label>
-                <input type="text" id="causeOfDeath" name="causeOfDeath" maxlength="64" pattern="^[a-zA-ZåäöÅÄÖ]+$" required>
+                <input type="text" id="causeOfDeath" name="causeOfDeath" maxlength="64" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" required>
             </div>
 
             <button type="submit" class="submit-btn">Add Survivor</button>
