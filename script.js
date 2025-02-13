@@ -1,20 +1,24 @@
+// Survivor Form
 document.getElementById('survivorForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Get form input
+    // Get form input values
     const name = document.getElementById('name').value;
-    const age = document.getElementById('age').value;
+    let huntxp = document.getElementById('huntxp').value;
     const gender = document.getElementById('gender').value;
     const causeOfDeath = document.getElementById('causeOfDeath').value;
+
+    // Sanitize Hunt XP
+    huntxp = Math.abs(huntxp);
 
     // Create survivor in list
     const graveyardList = document.getElementById('graveyard');
     const newSurvivor = document.createElement('li');
-    newSurvivor.textContent = `Name: ${name}, Age: ${age}, Gender: ${gender}, Cause of Death: ${causeOfDeath}`;
+    newSurvivor.textContent = `Name: ${name}, Hunt XP: ${huntxp}, Gender: ${gender}, Cause of Death: ${causeOfDeath}`;
 
     graveyardList.appendChild(newSurvivor);
 
-    // Clear
+    // Clear form
     document.getElementById('survivorForm').reset();
 
     // Success message

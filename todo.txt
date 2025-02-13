@@ -1,5 +1,15 @@
 Add database connection
 Move Graveyard list to separate site
-Stringify input
+Stringify input, sanitize and validate input data
 Add KDM symbols and flair and style
 Add sound effects
+CSP and nonces to avoid inline js script
+
+Add the following tables and input:
+Favorite Weapon: - List all weapon keywords
+Favorite Fighting Art - Free text field or list all?
+Additional info - Free text
+Arc survivor checkbox
+If it is an arc survivor - add additional input fields
+-Philosophy
+-Favorite Knowledge
