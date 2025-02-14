@@ -20,36 +20,124 @@
             <!--Name-->
             <div class="form-group">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" required>
-            </div>
-
-            <!--Hunt XP-->
-            <div class="form-group">
-                <label for="huntxp">Hunt XP:</label>
-                <input type="number" id="huntxp" name="huntxp" min="0" max="16" required>
+                <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Enter their name..." required>
             </div>
 
             <!--Gender-->
             <div class="form-group">
                 <label for="gender">Gender:</label>
                 <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Choose a gender...</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <!--Hunt XP-->
+            <div class="form-group">
+                <label for="huntxp">Hunt XP:</label>
+                <input type="number" id="huntxp" name="huntxp" min="0" max="16" placeholder="0-16" required>
+            </div>
+
+            <!--Favorite Weapon-->
+            <div class="form-group">
+                <label for="favoriteWeapon">Favorite Weapon:</label>
+                <select id="favoriteWeapon" name="favoriteWeapon" size="1" required>
+                    <option value="" disabled selected>Select a weapon...</option>
+                    <option value="Axe">Axe</option>
+                    <option value="Bow">Bow</option>
+                    <option value="Cleaver">Cleaver</option>
+                    <option value="Club">Club</option>
+                    <option value="Dagger">Dagger</option>
+                    <option value="Fan">Fan</option>
+                    <option value="Fist & Tooth">Fist & Tooth</option>
+                    <option value="Grand">Grand</option>
+                    <option value="Katana">Katana</option>
+                    <option value="Katar">Katar</option>
+                    <option value="Saw">Saw</option>
+                    <option value="Scimitar">Scimitar</option>
+                    <option value="Scythe">Scythe</option>
+                    <option value="Shield">Shield</option>
+                    <option value="Spear">Spear</option>
+                    <option value="Sword">Sword</option>
+                    <option value="Thrown">Thrown</option>
+                    <option value="Whip">Whip</option>
                 </select>
             </div>
 
             <!--Cause of Death-->
             <div class="form-group">
                 <label for="causeOfDeath">Cause of Death:</label>
-                <input type="text" id="causeOfDeath" name="causeOfDeath" maxlength="64" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" required>
+                <select id="causeOfDeath" name="causeOfDeath" required>
+                    <option value="" disabled selected>Select cause of death...</option>
+                    <option value="Monster">Monster</option>
+                    <option value="Nemesis">Nemesis</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
+            
+            <!--Monster Form (Hidden)-->
+            <div id="monsterForm" class="form-group" style="display: none;">
+                <label for="monsterName">Monster Name:</label>
+                <select id="monsterName" name="monsterName">
+                    <option value="" disabled selected>Select a monster...</option>
+                    <option value="Bone Eaters">Bone Eaters</option>
+                    <option value="Crimson Crocodile">Crimson Crocodile</option>
+                    <option value="Dragon King">Dragon King</option>
+                    <option value="Dung Beetle Knight">Dung Beetle Knight</option>
+                    <option value="Flower Knight">Flower Knight</option>
+                    <option value="Frogdog">Frogdog</option>
+                    <option value="Gorm">Gorm</option>
+                    <option value="King">King</option>
+                    <option value="Lion God">Lion God</option>
+                    <option value="Phoenix">Phoenix</option>
+                    <option value="Screaming Antelope">Screaming Antelope</option>
+                    <option value="Smog Singers">Smog Singers</option>
+                    <option value="Spidicules">Spidicules</option>
+                    <option value="Sunstalker">Sunstalker</option>
+                    <option value="White Gigalion">White Gigalion</option>
+                    <option value="White Lion">White Lion</option>
+                </select>
+            </div>
+            
+            <!--Nemesis Form (Hidden)-->
+            <div id="nemesisForm" class="form-group" style="display: none;">
+                <label for="nemesisName">Nemesis Name:</label>
+                <select id="nemesisName" name="nemesisName">
+                    <option value="" disabled selected>Select a nemesis...</option>
+                    <option value="Atnas">Atnas</option>
+                    <option value="Black Knight">Black Knight</option>
+                    <option value="Butcher">Butcher</option>
+                    <option value="Gambler">Gambler</option>
+                    <option value="Godhand">Godhand</option>
+                    <option value="Gold Smoke Knight">Gold Smoke Knight</option>
+                    <option value="Killennium Butcher">Killennium Butcher</option>
+                    <option value="King's Man">King's Man</option>
+                    <option value="Lion Knight">Lion Knight</option>
+                    <option value="Lonely Tree">Lonely Tree</option>
+                    <option value="Manhunter">Manhunter</option>
+                    <option value="Slenderman">Slenderman</option>
+                    <option value="The Hand">The Hand</option>
+                    <option value="Tyrant">Tyrant</option>
+                    <option value="Watcher">Watcher</option>
+                </select>
+            </div>
+            
+            <!--Other Form (Hidden initially)-->
+            <div id="otherForm" class="form-group" style="display: none;">
+                <label for="otherCause">Other Cause of Death:</label>
+                <input type="text" id="otherCause" name="otherCause" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Specify cause of death">
+            </div>
+            
+            <!--Submit Button-->
+        <button type="submit" class="submit-btn">Add Survivor</button>
 
-            <button type="submit" class="submit-btn">Add Survivor</button>
         </form>
 
         <!--Message display after adding survivor-->
         <div id="message"></div>
         
+        <!--List-->
         <div id="graveyardList">
             <h2>Graveyard</h2>
             <ul id="graveyard"></ul>

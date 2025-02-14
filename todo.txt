@@ -1,17 +1,20 @@
 Add database connection
-Move Graveyard list to separate site
+Separate site for all entries
 Stringify input, sanitize and validate input data
-Add KDM symbols and flair and style
+Add KDM symbols and style
 Add sound effects
 CSP and nonces to avoid inline js script
 If user inputs illegal characters, add something that lets them know
-
+Add disclaimer
+Add login, username and password?
 
 Add the following tables and input:
-Favorite Weapon: - List all weapon keywords
 Favorite Fighting Art - Free text field or list all?
 Additional info - Free text
+
 Arc survivor checkbox
 If it is an arc survivor - add additional input fields
 -Philosophy
 -Favorite Knowledge
+
+Clean up script.js!
