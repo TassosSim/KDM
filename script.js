@@ -48,7 +48,7 @@ document.getElementById('survivorForm').addEventListener('submit', function(even
     // Reset the Arc Survivor checkbox and philosophy field
     document.getElementById('arcSurvivor').checked = false;
     document.getElementById('philosophyField').style.display = 'none';
-    document.getElementById('philosophy').value = 'none';
+    document.getElementById('philosophy').value = 'None';
 
     // Success message
     displayMessage(`${name} has been added to the Graveyard!`);
