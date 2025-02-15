@@ -105,6 +105,13 @@ input, select {
     background-color: #0056b3;
 }
 
+.submit-btn svg{
+    transform: scale(1.2);
+    margin-right: 5px;
+    padding-top: 3px;
+}
+
+
 /* Arc Survivor Checkbox */
 #arcSurvivor {
     position: absolute;
