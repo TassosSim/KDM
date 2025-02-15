@@ -1,7 +1,6 @@
 Add database connection
 Separate site for all entries
 Stringify input, sanitize and validate input data
-Add KDM symbols and style
 Add sound effects
 CSP and nonces to avoid inline js script
 If user inputs illegal characters, add something that lets them know
@@ -16,5 +15,3 @@ Arc survivor checkbox
 If it is an arc survivor - add additional input fields
 -Philosophy
 -Favorite Knowledge
-
-Clean up script.js!

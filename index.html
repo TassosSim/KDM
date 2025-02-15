@@ -8,24 +8,46 @@
 </head>
 <body>
 
-    <!--Container-->
+    <!-- Container -->
     <div class="container">
         <header>
             <h1>The Hall of Fame</h1>
             <p>Fallen Survivors</p>
         </header>
         
+        <!-- Survivor Form -->
         <form id="survivorForm">
 
-            <!--Name-->
+            <!-- Name -->
             <div class="form-group">
-                <label for="name">Name:</label>
+                <label for="name">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M15.4998 5.50067L18.3282 8.3291M13 21H21M3 21.0004L3.04745 20.6683C3.21536 19.4929 3.29932 18.9052 3.49029 18.3565C3.65975 17.8697 3.89124 17.4067 4.17906 16.979C4.50341 16.497 4.92319 16.0772 5.76274 15.2377L17.4107 3.58969C18.1918 2.80865 19.4581 2.80864 20.2392 3.58969C21.0202 4.37074 21.0202 5.63707 20.2392 6.41812L8.37744 18.2798C7.61579 19.0415 7.23497 19.4223 6.8012 19.7252C6.41618 19.994 6.00093 20.2167 5.56398 20.3887C5.07171 20.5824 4.54375 20.6889 3.48793 20.902L3 21.0004Z" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    Name:
+                </label>
                 <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Enter their name..." required>
-            </div>
-
-            <!--Gender-->
+            </div>            
+            
+            <!-- Gender -->
             <div class="form-group">
-                <label for="gender">Gender:</label>
+                <label for="gender">
+                    <svg height="20px" width="20px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                        <style type="text/css"> .st0{fill:#696969;} </style> <g>
+                            <path class="st0" d="M474.234,284.88c23.29-23.268,37.781-55.654,37.766-91.185c0.015-35.53-14.476-67.917-37.766-91.178 c-23.261-23.298-55.64-37.788-91.185-37.766c-35.53-0.022-67.924,14.469-91.17,37.766c-23.304,23.261-37.795,55.648-37.78,91.178 c-0.015,35.53,14.476,67.916,37.78,91.185c19.268,19.297,44.809,32.517,73.21,36.488v52.976h-58.486v35.944h58.486v56.766h35.937 v-56.766h58.486v-35.944h-58.486v-52.976C429.426,317.397,454.966,304.177,474.234,284.88z M383.049,275.921 c-11.413-0.008-22.172-2.301-32.002-6.454c-14.724-6.222-27.327-16.684-36.198-29.817c-8.857-13.147-14.012-28.844-14.012-45.955 c0-11.42,2.294-22.172,6.447-31.994c6.214-14.731,16.669-27.326,29.81-36.198c13.155-8.864,28.85-14.019,45.955-14.034 c11.413,0.008,22.172,2.302,32.002,6.462c14.724,6.214,27.327,16.676,36.198,29.809c8.857,13.156,14.012,28.851,14.026,45.956 c-0.014,11.42-2.308,22.172-6.461,31.995c-6.214,14.73-16.683,27.333-29.81,36.198 C415.849,270.759,400.168,275.907,383.049,275.921z"></path>
+                            <path class="st0" d="M146.912,202.305v-88.55l35.69,35.683l25.424-25.41l-79.075-79.082l-79.09,79.082l25.41,25.41l35.704-35.69 v88.557c-28.401,3.978-53.941,17.199-73.209,36.502C14.462,262.069-0.014,294.448,0,329.979 c-0.014,35.545,14.462,67.924,37.766,91.184c23.261,23.305,55.64,37.788,91.185,37.774c35.53,0.014,67.91-14.469,91.17-37.774 c23.304-23.261,37.78-55.64,37.78-91.184c0-35.53-14.476-67.91-37.78-91.171C200.854,219.505,175.313,206.283,146.912,202.305z M204.716,361.981c-6.229,14.73-16.683,27.326-29.81,36.198c-13.154,8.872-28.85,14.027-45.955,14.027 c-11.427,0-22.172-2.294-32.002-6.447c-14.723-6.229-27.327-16.684-36.198-29.817c-8.872-13.155-14.026-28.844-14.026-45.962 c0-11.412,2.294-22.164,6.446-31.987c6.229-14.723,16.684-27.326,29.824-36.198c13.14-8.864,28.836-14.011,45.955-14.026 c11.413,0,22.157,2.294,32.002,6.454c14.709,6.222,27.312,16.676,36.184,29.809c8.871,13.156,14.026,28.844,14.026,45.948 C211.163,341.405,208.868,352.165,204.716,361.981z"></path> 
+                        </g>
+                        </g>
+                    </svg>
+                    Gender:
+                </label>
                 <select id="gender" name="gender" required>
                     <option value="" disabled selected>Choose a gender...</option>
                     <option value="Male">Male</option>
@@ -33,16 +55,34 @@
                 </select>
             </div>
 
-            <!--Hunt XP-->
+            <!-- Hunt XP -->
             <div class="form-group">
-                <label for="huntxp">Hunt XP:</label>
+                <label for="huntxp">
+                    <svg height="20px" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4.58579 4.58579C4.73329 4.43829 4.90386 4.31386 5.09202 4.21799C5.51984 4 6.0799 4 7.2 4H16.8C17.9201 4 18.4802 4 18.908 4.21799C19.0961 4.31386 19.2667 4.43829 19.4142 4.58579M4.58579 4.58579C4.43829 4.73329 4.31386 4.90386 4.21799 5.09202C4 5.51984 4 6.07989 4 7.2V16.8C4 17.9201 4 18.4802 4.21799 18.908C4.31386 19.0961 4.43829 19.2667 4.58579 19.4142M4.58579 4.58579L19.4142 19.4142M19.4142 4.58579C19.5617 4.73329 19.6861 4.90386 19.782 5.09202C20 5.51984 20 6.0799 20 7.2V16.8C20 17.9201 20 18.4802 19.782 18.908C19.6861 19.0961 19.5617 19.2667 19.4142 19.4142M19.4142 4.58579L4.58579 19.4142M4.58579 19.4142C4.73329 19.5617 4.90386 19.6861 5.09202 19.782C5.51984 20 6.07989 20 7.2 20H16.8C17.9201 20 18.4802 20 18.908 19.782C19.0961 19.6861 19.2667 19.5617 19.4142 19.4142" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                    Hunt XP:
+                </label>
                 <input type="number" id="huntxp" name="huntxp" min="0" max="16" placeholder="0-16" required>
             </div>
 
-            <!--Favorite Weapon-->
+            <!-- Favorite Weapon -->
             <div class="form-group">
-                <label for="favoriteWeapon">Favorite Weapon:</label>
-                <select id="favoriteWeapon" name="favoriteWeapon" size="1" required>
+                <label for="favoriteWeapon">
+                    <svg height="20px" width="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="none" stroke="#696969" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="m2.75 9.25 1.5 2.5 2 1.5m-4.5 0 1 1m1.5-2.5-1.5 1.5m3-1 8.5-8.5v-2h-2l-8.5 8.5"></path> 
+                        </g>
+                    </svg>
+                    Favorite Weapon:
+                </label>
+                <select id="favoriteWeapon" name="favoriteWeapon" required>
                     <option value="" disabled selected>Select a weapon...</option>
                     <option value="Axe">Axe</option>
                     <option value="Bow">Bow</option>
@@ -65,9 +105,18 @@
                 </select>
             </div>
 
-            <!--Cause of Death-->
+            <!-- Cause of Death -->
             <div class="form-group">
-                <label for="causeOfDeath">Cause of Death:</label>
+                <label for="causeOfDeath">
+                    <svg height="20px" width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M10 18V21M14 20V21M21 12V13C21 15.2091 19.2091 17 17 17V21H7V17C4.79086 17 3 15.2091 3 13V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM10 10.5C10 11.6046 9.10457 12.5 8 12.5C6.89543 12.5 6 11.6046 6 10.5C6 9.39543 6.89543 8.5 8 8.5C9.10457 8.5 10 9.39543 10 10.5ZM18 10.5C18 11.6046 17.1046 12.5 16 12.5C14.8954 12.5 14 11.6046 14 10.5C14 9.39543 14.8954 8.5 16 8.5C17.1046 8.5 18 9.39543 18 10.5Z" stroke="#696969" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                    </g>
+                </svg>
+                    Cause of Death:
+                </label>
                 <select id="causeOfDeath" name="causeOfDeath" required>
                     <option value="" disabled selected>Select cause of death...</option>
                     <option value="Monster">Monster</option>
@@ -75,10 +124,11 @@
                     <option value="Other">Other</option>
                 </select>
             </div>
+
             
-            <!--Monster Form (Hidden)-->
+            <!-- Monster Form (Hidden) -->
             <div id="monsterForm" class="form-group" style="display: none;">
-                <label for="monsterName">Monster Name:</label>
+                <label for="monsterName">Monster:</label>
                 <select id="monsterName" name="monsterName">
                     <option value="" disabled selected>Select a monster...</option>
                     <option value="Bone Eaters">Bone Eaters</option>
@@ -100,9 +150,9 @@
                 </select>
             </div>
             
-            <!--Nemesis Form (Hidden)-->
+            <!-- Nemesis Form (Hidden) -->
             <div id="nemesisForm" class="form-group" style="display: none;">
-                <label for="nemesisName">Nemesis Name:</label>
+                <label for="nemesisName">Nemesis:</label>
                 <select id="nemesisName" name="nemesisName">
                     <option value="" disabled selected>Select a nemesis...</option>
                     <option value="Atnas">Atnas</option>
@@ -123,21 +173,21 @@
                 </select>
             </div>
             
-            <!--Other Form (Hidden initially)-->
+            <!-- Other Cause of Death Form (Hidden) -->
             <div id="otherForm" class="form-group" style="display: none;">
-                <label for="otherCause">Other Cause of Death:</label>
-                <input type="text" id="otherCause" name="otherCause" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Specify cause of death">
+                <label for="otherCause">Other cause:</label>
+                <input type="text" id="otherCause" name="otherCause" maxlength="48" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Specify cause of death">
             </div>
             
-            <!--Submit Button-->
-        <button type="submit" class="submit-btn">Add Survivor</button>
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">+ Add Survivor</button>
 
         </form>
 
-        <!--Message display after adding survivor-->
+        <!-- Message display after adding survivor -->
         <div id="message"></div>
         
-        <!--List-->
+        <!-- Graveyard List -->
         <div id="graveyardList">
             <h2>Graveyard</h2>
             <ul id="graveyard"></ul>
