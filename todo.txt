@@ -1,17 +1,14 @@
-Add database connection
-Separate site for all entries
-Stringify input, sanitize and validate input data
 Add sound effects
 CSP and nonces to avoid inline js script
-If user inputs illegal characters, add something that lets them know
 Add disclaimer
-Add login, username and password?
+Add login, username and password to site?
 
-Add the following tables and input:
-Favorite Fighting Art - Free text field or list all?
+List the character much better than in a string and style it, including the button
+
+Add icons to sub-fields?
+Monster, Nemesis, Philosophy
+
 Additional info - Free text
 
-Arc survivor checkbox
-If it is an arc survivor - add additional input fields
--Philosophy
--Favorite Knowledge
+
+Add image? Base64?

@@ -71,6 +71,10 @@ form {
 
 }
 
+.delete-btn {
+    margin-left: 0.5rem;
+}
+
 label {
     display: block;
     font-weight: bold;
@@ -99,6 +103,13 @@ input, select {
 
 .submit-btn:hover {
     background-color: #0056b3;
+}
+
+/* Arc Survivor Checkbox */
+#arcSurvivor {
+    position: absolute;
+    width: 5rem;
+    transform: scale(1.5);
 }
 
 /* Graveyard list styles */
