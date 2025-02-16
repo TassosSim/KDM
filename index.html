@@ -45,7 +45,7 @@
                     </svg>
                     Name:
                 </label>
-                <input type="text" id="name" name="name" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Enter a name..." required>
+                <input type="text" id="name" name="name" maxlength="16" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Enter a name..." required>
             </div>
 
             <!-- Gender -->
@@ -119,14 +119,28 @@
                     <option value="Whip">Whip</option>
                 </select>
             </div>
-
+            
             <!-- Philosophy Field (Initially Hidden) -->
             <div id="philosophyField" class="form-group" style="display: none;">
                 <label for="philosophy">Philosophy:</label>
                 <select id="philosophy" name="philosophy">
                     <option value="None">None</option>
-                    <option value="Survivalism">Survivalism</option>
+                    <option value="Ambitionism">Ambitionism</option>
+                    <option value="Champion">Champion</option>
+                    <option value="Collectivism">Collectivism</option>
+                    <option value="Deadism">Deadism</option>
                     <option value="Dreamism">Dreamism</option>
+                    <option value="Faceism">Faceism</option>
+                    <option value="Gourmandism">Gourmandism</option>
+                    <option value="Homicidalism">Homicidalism</option>
+                    <option value="Impermanism">Impermanism</option>
+                    <option value="Lanternism">Lanternism</option>
+                    <option value="Marrowism">Marrowism</option>
+                    <option value="Optimism">Optimism</option>
+                    <option value="Regalism">Regalism</option>
+                    <option value="Romanticism">Romanticism</option>
+                    <option value="Survivalism">Survivalism</option>
+                    <option value="Verminism">Verminism</option>
                 </select>
             </div>
 
@@ -201,7 +215,7 @@
             <!-- Other Cause of Death Form (Hidden) -->
             <div id="otherForm" class="form-group" style="display: none;">
                 <label for="otherCause">Other cause:</label>
-                <input type="text" id="otherCause" name="otherCause" maxlength="48" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Specify cause of death">
+                <input type="text" id="otherCause" name="otherCause" maxlength="24" pattern="^[a-zA-ZåäöÅÄÖ\s]+$" placeholder="Specify cause of death">
             </div>
             
             <!-- Submit Button -->

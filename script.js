@@ -160,14 +160,16 @@ function displaySurvivors() {
     survivors.forEach((survivor, index) => {
         const survivorElement = document.createElement('li');
         survivorElement.textContent =
-        `Name: ${survivor.name}, 
-        Hunt XP: ${survivor.huntxp}, 
-        Gender: ${survivor.gender}, 
-        Favorite Weapon: ${survivor.favoriteWeapon}, 
-        Philosophy: ${survivor.philosophy}, 
-        Cause of Death: ${survivor.causeOfDeath}`;
+        `Name: ${survivor.name}\n
+        Hunt XP: ${survivor.huntxp}\n
+        Gender: ${survivor.gender}\n
+        Favorite Weapon: ${survivor.favoriteWeapon}\n
+        Philosophy: ${survivor.philosophy}\n
+        Cause of Death: ${survivor.causeOfDeath}\n`;
+
+        survivorElement.innerHTML = survivorElement.textContent.replace(/\n/g, '<br>');
         
-        // Create a delete button for each survivor
+        // Create a delete button for each survivor in the list
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
         deleteButton.classList.add('delete-btn');
@@ -175,7 +177,6 @@ function displaySurvivors() {
 
         // Append the delete button to the list item
         survivorElement.appendChild(deleteButton);
-
         graveyardList.appendChild(survivorElement);
     });
 }
