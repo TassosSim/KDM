@@ -1,7 +1,5 @@
-Additional info - Free text
-
-
 -Maybe?
+Additional info - Free text
 Upload picture? Base64?
 Sound effects?
 CSP and nonces?
