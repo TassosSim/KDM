@@ -4,8 +4,8 @@ document.getElementById('survivorForm').addEventListener('submit', function(even
 
     // Check if all required fields are filled out
     if (!validateForm()) {
-        displayMessage("Please fill out all required fields.");
-        return; // Stop submission if any required field is missing
+        displayMessage("Please fill out all required fields.", "#d14941");
+        return;
     }
 
     // Get form input values
@@ -50,8 +50,8 @@ document.getElementById('survivorForm').addEventListener('submit', function(even
     document.getElementById('philosophyField').style.display = 'none';
     document.getElementById('philosophy').value = 'None';
 
-    // Success message
-    displayMessage(`${name} has been added to the Graveyard!`);
+    // Success message with light green color
+    displayMessage(`${name} has been added to the Graveyard!`, "lightgreen");
 });
 
 // Function to get additional cause of death input
@@ -73,10 +73,11 @@ function hideCauseOfDeathForms() {
     forms.forEach(formId => document.getElementById(formId).style.display = 'none');
 }
 
-// Function to display success message
-function displayMessage(messageText) {
+// Function to display success or error message with specific color
+function displayMessage(messageText, color) {
     const message = document.getElementById('message');
     message.textContent = messageText;
+    message.style.color = color;
     setTimeout(() => message.textContent = '', 5000);
 }
 
@@ -159,34 +160,42 @@ function displaySurvivors() {
 
     survivors.forEach((survivor, index) => {
         const survivorElement = document.createElement('li');
-        survivorElement.textContent =
-        `Name: ${survivor.name}\n
-        Hunt XP: ${survivor.huntxp}\n
-        Gender: ${survivor.gender}\n
-        Favorite Weapon: ${survivor.favoriteWeapon}\n
-        Philosophy: ${survivor.philosophy}\n
-        Cause of Death: ${survivor.causeOfDeath}\n`;
+        survivorElement.innerHTML =
+        `Name: <span class="value">${survivor.name}</span><br>
+        Hunt XP: <span class="value">${survivor.huntxp}</span><br>
+        Gender: <span class="value">${survivor.gender}</span><br>
+        Favorite Weapon: <span class="value">${survivor.favoriteWeapon}</span><br>
+        Philosophy: <span class="value">${survivor.philosophy}</span><br>
+        Cause of Death: <span class="value">${survivor.causeOfDeath}</span><br>`;
 
-        survivorElement.innerHTML = survivorElement.textContent.replace(/\n/g, '<br>');
-        
         // Create a delete button for each survivor in the list
         const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'X';
-        deleteButton.classList.add('delete-btn');
-        deleteButton.addEventListener('click', () => deleteSurvivor(index));
+        deleteButton.innerHTML = '&#10006;';
 
-        // Append the delete button to the list item
+        // Add event listener for the delete action with confirmation
+        deleteButton.addEventListener('click', () => {
+            const isConfirmed = confirm(`Are you sure you want to delete ${survivor.name}?`);
+
+            if (isConfirmed) {
+                deleteSurvivor(index, survivor.name);
+            }
+        });
+
+        deleteButton.classList.add('delete-btn');
         survivorElement.appendChild(deleteButton);
         graveyardList.appendChild(survivorElement);
     });
 }
 
 // Delete survivor from list and update the cookie
-function deleteSurvivor(index) {
+function deleteSurvivor(index, survivorName) {
     const survivors = getSurvivorsFromCookie();
     survivors.splice(index, 1);
     saveSurvivorsToCookie(survivors);
     displaySurvivors();
+
+    // Display the message that the survivor has been removed
+    displayMessage(`${survivorName} has been removed from the Graveyard`, "#d14941");
 }
 
 // Load survivors from cookie when the page loads

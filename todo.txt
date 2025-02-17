@@ -1,9 +1,5 @@
-Add disclaimer
-List the character much better than in a string and style it, including the button
 Add icons to sub-fields: Monster, Nemesis, Philosophy
 Additional info - Free text
-
-Restructure javascript
 
 
 -Maybe?
@@ -11,3 +7,4 @@ Upload picture? Base64?
 Sound effects?
 CSP and nonces?
 Login, username and password to site?
+Animations
