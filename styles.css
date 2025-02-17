@@ -148,8 +148,8 @@ input, select {
 
 /* Style for the printed values */
 .value {
-    color: #beac64;  /* Change to your desired color */
-    font-weight: bold; /* Optional: makes the values bold */
+    color: #beac64;
+    font-weight: bold;
 }
 
 /* Message Display Styles */
